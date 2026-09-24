@@ -90,7 +90,7 @@ func characterCreation() Character {
 		[]string{healPotion, healPotion, healPotion}, []string{"Coup de poing", classSkill})
 }
 func displayInfo(p *Character) {
-	fmt.Println("\n=== PROFIL ===")
+	fmt.Println(cyan + "\n=== PROFIL ===")
 	fmt.Println("Nom :", p.Name)
 	fmt.Println("Classe :", p.Class)
 	fmt.Printf("Niveau : %d | XP : %d/%d\n", p.Level, p.XP, p.XPMax)

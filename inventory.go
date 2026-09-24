@@ -35,7 +35,7 @@ func count(p *Character, item string) int {
 	return total
 }
 func showInventory(p *Character) {
-	fmt.Printf("\n=== INVENTAIRE %d/%d ===\n", len(p.Inventory), p.Capacity)
+	fmt.Printf(vert+"\n=== INVENTAIRE %d/%d ===\n", len(p.Inventory), p.Capacity)
 	if len(p.Inventory) == 0 {
 		fmt.Println("Inventaire vide.")
 	}
