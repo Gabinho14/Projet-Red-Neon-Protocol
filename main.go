@@ -39,7 +39,7 @@ func main() {
 		case 7:
 			bosses(&player) // Dans combat.go
 		case 8:
-			fmt.Println("Artistes caches : ABBA et Daft Punk.")
+			fmt.Println("Artistes caches : ABBA et STeven Spielberg.")
 		case 9:
 			fmt.Println("Deconnexion.")
 			return
