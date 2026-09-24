@@ -115,9 +115,9 @@ func fightInventory(p *Character, m *Monster) bool {
 }
 func charTurn(p *Character, m *Monster) bool {
 	for {
-		fmt.Println("\n1. Attaquer")
-		fmt.Println("2. Inventaire")
-		fmt.Println("3. Fuir")
+		fmt.Println(rouge + "\n1. Attaquer" + reset)
+		fmt.Println(jaune + "2. Inventaire" + reset)
+		fmt.Println(vert + "3. Fuir" + reset)
 		fmt.Print("Action : ")
 		switch readInt() {
 		case 1:
@@ -167,8 +167,8 @@ func fight(p *Character, m *Monster) bool {
 	fmt.Print("Activer le combat automatique ? (o/n) : ")
 	auto := strings.ToLower(readText()) == "o"
 	for turn := 1; p.HP > 0 && m.HP > 0; turn++ {
-		fmt.Printf("\nTour %d | Vous %d/%d PV | %s %d/%d PV\n",
-			turn, p.HP, p.MaxHP, m.Name, m.HP, m.MaxHP)
+		fmt.Printf("\nTour %d | Vous %d/%d PV (%.1f/%.1f RAM) | %s %d/%d PV\n",
+			turn, p.HP, p.MaxHP, p.RAM, p.MaxRAM, m.Name, m.HP, m.MaxHP)
 		if p.Initiative >= m.Initiative {
 			if playerTurn(p, m, auto) {
 				return false
@@ -204,10 +204,10 @@ func trainingFight(p *Character) {
 }
 func missions(p *Character) {
 	ClearTerminal()
-	fmt.Println("\n=== MISSIONS ===")
-	fmt.Println("1. Corpodrone")
-	fmt.Println("2. Cabot sentinelle")
-	fmt.Println("3. Brute chromee")
+	fmt.Println(cyan + "\n=== MISSIONS ===" + reset)
+	fmt.Println(vert + "1. Corpodrone" + reset)
+	fmt.Println(jaune + "2. Cabot sentinelle" + reset)
+	fmt.Println(rouge + "3. Brute chromee" + reset)
 	fmt.Println("0. Retour")
 	fmt.Print("Choix : ")
 	var m Monster
@@ -225,10 +225,10 @@ func missions(p *Character) {
 }
 func bosses(p *Character) {
 	ClearTerminal()
-	fmt.Println("\n=== COMBATS DE BOSS ===")
-	fmt.Println("1. Saburo Arasaka")
-	fmt.Println("2. Yorinobu Arasaka")
-	fmt.Println("3. Dexter DeShawn")
+	fmt.Println(cyan + "\n=== COMBATS DE BOSS ===" + reset)
+	fmt.Println(vert + "1. Saburo Arasaka" + reset)
+	fmt.Println(jaune + "2. Yorinobu Arasaka" + reset)
+	fmt.Println(rouge + "3. Dexter DeShawn" + reset)
 	fmt.Println("0. Retour")
 	fmt.Print("Choix : ")
 

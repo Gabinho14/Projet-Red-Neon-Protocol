@@ -1,6 +1,15 @@
 package main
 
 const (
+	cyan    = "\033[36m"
+	vert    = "\033[32m"
+	jaune   = "\033[33m"
+	rouge   = "\033[31m"
+	magenta = "\033[35m"
+	reset   = "\033[0m"
+)
+
+const (
 	healPotion      = "Polyconducteur"
 	manaPotion      = "Restauram"
 	poisonPotion    = "Corrupteur bionique"

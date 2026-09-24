@@ -21,7 +21,7 @@ func market(p *Character) {
 	}
 	for {
 		ClearTerminal()
-		fmt.Printf("\n=== SCAVENGER : %d credits ===\n", p.Gold)
+		fmt.Printf(cyan+"\n=== SCAVENGER : %d credits ===\n", p.Gold)
 		for i, item := range items {
 			fmt.Printf("%d. %s : %d credits\n", i+1, item.Name, item.Price)
 		}
@@ -68,7 +68,7 @@ func craft(p *Character, result string, materials map[string]int) {
 func workshop(p *Character) {
 	for {
 		ClearTerminal()
-		fmt.Println("\n=== ASSEMBLEUR CYBERNETIQUE ===")
+		fmt.Println(magenta + "\n=== ASSEMBLEUR CYBERNETIQUE ===")
 		fmt.Println("1. Coque neurale (+10 pv) : antenne + gaine isolante + 10 credits")
 		fmt.Println("2. Neuroblindage (+20 pv) : 2 antennes + chromofibre + 10 credits")
 		fmt.Println("3. Tunique cybernetique (+25 pv) : 2 antennes + plaque cyber + 10 credits")

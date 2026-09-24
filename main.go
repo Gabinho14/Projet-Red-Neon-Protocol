@@ -11,35 +11,41 @@ func main() {
 	player := characterCreation()
 	for {
 		ClearTerminal()
-		fmt.Println("\n=== NEON PROTOCOL ===")
-		fmt.Println("1. Profil")
-		fmt.Println("2. Inventaire")
-		fmt.Println("3. Scavenger")
-		fmt.Println("4. Assembleur cybernetique")
-		fmt.Println("5. Entrainement")
-		fmt.Println("6. Missions de combat")
-		fmt.Println("7. Boss")
-		fmt.Println("8. Qui sont-ils ?")
+		fmt.Println(cyan + "╔═══════════════════════════════════════╗" + reset)
+		fmt.Println(cyan + "║             NEON PROTOCOL             ║" + reset)
+		fmt.Println(cyan + "╚═══════════════════════════════════════╝\n" + reset)
+		fmt.Println(vert + "1. Profil" + reset)
+		fmt.Println(vert + "2. Inventaire" + reset)
+		fmt.Println(jaune + "3. Scavenger" + reset)
+		fmt.Println(jaune + "4. Assembleur cybernetique" + reset)
+		fmt.Println(rouge + "5. Entrainement" + reset)
+		fmt.Println(rouge + "6. Missions de combat" + reset)
+		fmt.Println(rouge + "7. Boss" + reset)
+		fmt.Println(magenta + "8. Qui sont-ils ?" + reset)
 		fmt.Println("9. Quitter")
 		fmt.Print("Choix : ")
 
-		switch readInt() { // readInt est définie dans utils.go
+		switch readInt() {
 		case 1:
-			displayInfo(&player) // Dans character.go
+			displayInfo(&player)
+			fmt.Println("\nAppuyez sur Entrée et saisissez un caractère pour continuer...")
+			readText()
 		case 2:
-			accessInventory(&player) // Dans inventory.go
+			accessInventory(&player)
 		case 3:
-			market(&player) // Dans shop.go
+			market(&player)
 		case 4:
-			workshop(&player) // Dans shop.go
+			workshop(&player)
 		case 5:
-			trainingFight(&player) // Dans combat.go
+			trainingFight(&player)
 		case 6:
-			missions(&player) // Dans combat.go
+			missions(&player)
 		case 7:
-			bosses(&player) // Dans combat.go
+			bosses(&player)
 		case 8:
-			fmt.Println("Artistes caches : ABBA et STeven Spielberg.")
+			fmt.Println("Artistes caches : ABBA et Steven Spielberg.")
+			fmt.Println("\nAppuyez sur Entrée et saisissez un caractère pour continuer...")
+			readText()
 		case 9:
 			fmt.Println("Deconnexion.")
 			return
